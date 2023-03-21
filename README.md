@@ -1,6 +1,7 @@
 # discord-musicbot
 Un proyecto de un bot de discord capaz de reproducir canciones de youtube
 
+<img src="https://i.imgur.com/SGnLMHp.jpg">
 
 ## **¿Cómo funciona?**
 
