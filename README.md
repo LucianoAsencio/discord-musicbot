@@ -1,4 +1,4 @@
-# discord-musicbot
+# discord-music-gpt-bot
 Un proyecto de un bot de discord capaz de reproducir canciones de youtube
 
 <img src="https://i.imgur.com/SGnLMHp.jpg">
@@ -37,15 +37,19 @@ Para hacer tu propio bot de discord tenés que:
  
         set BOT_TOKEN="tu_token"
         
+- Conseguí una clave de API de OpenAI.
+- Declará tu clave como variable de entorno
+
+         set OPENAI_API_KEY="tu_api_key"
+        
  - Descargá FFMpeg y pasale la ruta en el parametro "executable", en main.py.
 
         ... executable="C:/Tu/Ruta/ffmpeg.exe"...
         
  Ingresá tu bot a tu server de discord desde la web de desarrollador de discord, ejecutá main.py y listo!
  
- Ya tenés un bot de discord completamente funcional que puede reproducir canciones de youtube y obvio, es completamente configurable!
+Ya tenés un bot de discord completamente funcional que puede reproducir canciones de youtube, te contesta tus dudas y preguntas mediante una integración con la API de OpenAI con el modelo gpt-turbo-3.5 y obvio, es completamente configurable!
  
- En el futuro voy a estar integrando GPT con la api de OpenAI para que nuestro bot también nos pueda responder consultas.
  Cualquier duda, consulta o pregunta me la pueden hacer por acá, [Linkedin](www.linkedin.com/in/luciano-asencio) o por [mail](lucianoasencio01@gmail.com)!
  
 
