@@ -1,5 +1,5 @@
 # discord-music-gpt-bot
-Un proyecto de un bot de discord capaz de reproducir canciones de youtube
+Un proyecto de un bot de discord capaz de reproducir canciones de youtube y contestarte utilizando la API de OpenAI con ChatGPT
 
 <img src="https://i.imgur.com/SGnLMHp.jpg">
 
