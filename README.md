@@ -26,6 +26,7 @@ Para hacer tu propio bot de discord tenés que:
         ffmpeg
         PyNaCl
         yt-dlp
+        openai
         
  - Cloná el repositorio
  

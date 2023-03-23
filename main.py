@@ -1,6 +1,7 @@
 import discord
 import os
 import yt_dlp
+import openai
 
 from discord.ext import commands
 from dotenv import load_dotenv
@@ -51,6 +52,13 @@ async def resume(ctx):
     await ctx.voice_client.resume()
     await ctx.send("Resumido :P")
 
+
+@client.command()
+async def bot(ctx):
+    completion = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=[{"role": "user", "content": ctx.message.content}])
+    await ctx.send(completion.choices[0].message.content)
+
+
 @client.command()
 async def ayuda(ctx):
     embed = discord.Embed(title="Comandos disponibles", description="Aquí están los comandos disponibles para este bot.", color=discord.Color.brand_green())
@@ -59,7 +67,12 @@ async def ayuda(ctx):
     embed.add_field(name=".pause", value="Pausa lo que se está reproduciendo", inline=False)
     embed.add_field(name=".resume", value="Resume lo que se estaba reproduciendo", inline=False)
     embed.add_field(name=".disconnect", value="Desconecta al bot del canal", inline=False)
+    embed.add_field(name=".bot 'mensaje'", value="Te contesto tu mensaje", inline=False)
     await ctx.send(embed=embed)
 
+
+
 load_dotenv()
+openai.api_key = os.getenv('OPENAI_API_KEY')
+openai.organization = os.getenv('MY_ORGANIZATION')
 client.run(os.getenv('BOT_TOKEN'))
